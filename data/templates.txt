@@ -1,0 +1,128 @@
+1. premise: \n hypothesis: \n Classify as entailment, no entailment, or contradiction (Not for only causal)
+Example:
+premise: One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+hypothesis: One man was afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys . 
+Classify as entailment, no entailment, or contradiction.
+gold = {"causal excess": "no_entail", "causal": "entailment", "non_causal": "entailment", "only causal excess": "no_entail"}
+
+2. premise: \n hypothesis: \n Classify as entailment, no entailment, or contradiction (Not for only causal; deleting “so” and “that”)
+Example: 
+premise: One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys . 
+hypothesis: One man was afraid he camped in the middle of his flock , hoping to evade patrolling cowboys . 
+Classify as entailment, no entailment, or contradiction.
+gold = {"causal excess": "no_entail", "causal": "entailment", "non_causal": "entailment", "only causal excess": "no_entail"}
+
+3. Suppose {premise} Can we infer that "{hypothesis}"?
+Example: 
+One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .  
+Can we infer that "One man was afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys . " ?
+Answer with yes, no or uncertain.
+gold = {"causal excess": "no", "causal": "yes", "non_causal": "yes", "only causal excess": "no"}
+
+4. Suppose {premise} Can we infer that "{hypothesis}"? (deleting “so” and “that”)
+Example: 
+One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .  
+Can we infer that "One man was afraid he camped in the middle of his flock , hoping to evade patrolling cowboys . " ?
+Answer with yes, no or uncertain.
+gold = {"causal excess": "no", "causal": "yes", "non_causal": "yes", "only causal excess": "no"}
+
+
+--------------PRESENT OF CAUSALITY-----------------
+7. {premise} \n Is there a causal relationship between the main clause and the subordinate clause?\n Answer with yes, no or uncertain.
+Example:
+One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+Is there a causal relationship between the main clause and the subordinate clause?
+Answer with yes, no or uncertain.
+
+8. {premise} \nPart1: {part1} \nPart2: {part2} \nIs there a causal relationship between part 1 and part 2? \nAnswer with yes, no or uncertain.
+Example:
+One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+Part1: One man was so afraid
+Part2: He camped in the middle of his flock , hoping to evade patrolling cowboys .
+Is there a causal relationship between part 1 and part 2?
+Answer with yes, no or uncertain.
+
+--------------DIRECTION OF CAUSALITY-----------------
+
+5. premise: {premise} \n hypothesis: {hypothesis} \n Classify as entailment, no entailment, or contradiction.
+Example:
+premise: One man was not so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+hypothesis: He camped in the middle of his flock , hoping to evade patrolling cowboys .
+Classify as entailment, no entailment, or contradiction.
+
+6. premise \n hypothesis? \n Answer with yes, no or uncertain.
+Example:
+One man was not so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+Did he camp in the middle of his flock , hoping to evade patrolling cowboys ?
+Answer with yes, no or uncertain.
+
+9. {premise} \nPart1: {part1} \nPart2: {part2} \nCan we infer that Part1 is the cause of Part2? \nAnswer with yes, no or uncertain.
+One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+Part1: One man was so afraid
+Part2: He camped in the middle of his flock , hoping to evade patrolling cowboys
+Can we infer that Part1 is the cause of Part2?
+Answer with yes, no or uncertain.
+
+10. {premise} \nPart1: {part1} \nPart2: {part2} \nCan we infer that Part2 is the cause of Part1? \nAnswer with yes, no or uncertain.
+One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+Part1: One man was so afraid
+Part2: He camped in the middle of his flock , hoping to evade patrolling cowboys
+Can we infer that Part2 is the cause of Part1?
+Answer with yes, no or uncertain.
+
+
+16. {premise} \nThis entails one of two options. \n{part1} because {part2} \n{part2} because {part1} \nAnswer with the correct number.
+Example:
+One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+This entails one of two options.
+1) "One man was so afraid because he camped in the middle of his flock , hoping to evade patrolling cowboys ."
+2) "he camped in the middle of his flock , hoping to evade patrolling cowboys because one man was so afraid"
+Answer with the correct number.
+
+--------------CoLA-----------------
+
+11-15 Now we are going to say which sentences are acceptable (i.e., grammatical) and which are not.
+
+  Sentence: Flosa has often seen Marn.
+  Answer: good
+
+  Sentence: Chardon sees often Kuru.
+  Answer: bad
+
+  Sentence: Bob walk.
+  Answer: bad
+
+  Sentence: Malevolent floral candy is delicious.
+  Answer: good
+
+  Sentence: The bone chewed the dog.
+  Answer: good
+
+  Sentence: The bone dog the chewed.
+  Answer: bad
+
+  Sentence: I wonder you ate how much.
+  Answer: bad
+
+  Sentence: The fragrant orangutan sings loudest at Easter.
+  Answer: good
+
+  Sentence: {premise}
+  Answer:
+
+11. premise: original
+example: One man was so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+
+12. premise: without "so"
+example: One man was afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+
+13. premise: without "that"
+example: One man was afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+
+14. premise: without "so" and "that"
+example: One man was afraid he camped in the middle of his flock , hoping to evade patrolling cowboys .
+
+15. premise: not so that
+example: One man was not so afraid that he camped in the middle of his flock , hoping to evade patrolling cowboys .
+
+
